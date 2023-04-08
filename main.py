@@ -37,8 +37,9 @@ async def start_command(message: Message):
 async def get_horoscope(call: CallbackQuery):
     await call.answer()
     zodiac = call.data
-    text = await get_text_horoscope(zodiac=zodiac)
-    await call.message.edit_text(text=text)
+    text = await get_text_horoscope(zodiac)
+    await call.message.edit_text(text)
+
 
 async def start():
     bot: Bot = Bot(token=BOT_TOKEN)
