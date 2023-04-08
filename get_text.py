@@ -8,10 +8,6 @@ headers = {'accept-language': 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
            }
 
 
-
-
-
-
 async def get_response(link: str):
     async with httpx.AsyncClient(headers=headers, follow_redirects=True) as htx:
         result: httpx.Response = await htx.get(url=link)
